@@ -6,5 +6,5 @@ Check out the links above for our tutorials and wiring diagrams. This chip uses 
 
 To install, use the Arduino Library Manager and search for 'Adafruit INA219 MOCK' and install the library.
 
-Written by Johannes Reichhold.
+Written by JoJo1220.
 MIT license, all text above must be included in any redistribution

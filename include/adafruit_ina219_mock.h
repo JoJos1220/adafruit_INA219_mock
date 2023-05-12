@@ -5,7 +5,7 @@
  * the Adafruit INA219 Module. It simply mocks the original Libary
  * ----> https://github.com/adafruit/Adafruit_INA219.git
  *
- * Written by Johannes Reichhold.
+ * Written by Jojo1220.
  *
  * BSD license, all text here must be included in any redistribution.
  *
@@ -36,7 +36,6 @@ public:
 private:
   uint8_t i2caddr;
 };
-
 
 /*-----------------------------------------------------------------------------
  * MOCK Function definition
