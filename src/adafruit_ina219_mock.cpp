@@ -1,25 +1,109 @@
-#include "adafruit_ina219_mock.h"
+#include <adafruit_ina219_mock.h>
 
-void Adafruit_INA219_Mock::begin(void) {
-  // do nothing
+/*-----------------------------------------------------------------------------
+ * Declaration/Definition of static Libary internal Variables
+ * ----------------------------------------------------------------------------
+*/
+static int16_t fake_int16_BusVoltage = 0; // Define a static variable to store the fake value
+static int16_t fake_int16_Current = 0;
+static int16_t fake_int16_ShuntVoltage = 0;
+static int16_t fake_int16_Power = 0;
+static bool fake_bool_begin = false;
+static bool return_bool_begin = false;
+
+/*-----------------------------------------------------------------------------
+ * Adafruit_INA219::begin Method
+ * ----------------------------------------------------------------------------
+*/
+bool Adafruit_INA219::begin(uint8_t addr) {
+  return_bool_begin = fake_bool_begin;    // Set Global Return Value for TestUnit
+  return fake_bool_begin;
 }
 
-void Adafruit_INA219_Mock::setCalibration_32V_2A(void) {
-  // do nothing
+/*-----------------------------------------------------------------------------
+ * Adafruit_INA219::SetCalibration Method
+ * ----------------------------------------------------------------------------
+*/
+void Adafruit_INA219::setCalibration_32V_2A(void) {
+  // Return Nothing
 }
 
-int16_t Adafruit_INA219_Mock::getBusVoltage_raw(void) {
-  return fakeit::DefaultValue<int16_t>::get();
+/*-----------------------------------------------------------------------------
+ * Adafruit_INA219::getBusVoltage Method
+ * ----------------------------------------------------------------------------
+*/
+int16_t Adafruit_INA219::getBusVoltage_raw(void) {
+  return fake_int16_BusVoltage;
 }
 
-int16_t Adafruit_INA219_Mock::getShuntVoltage_raw(void) {
-  return fakeit::DefaultValue<int16_t>::get();
+/*-----------------------------------------------------------------------------
+ * Adafruit_INA219::getShuntVoltage Method
+ * ----------------------------------------------------------------------------
+*/
+int16_t Adafruit_INA219::getShuntVoltage_raw(void) {
+  return fake_int16_ShuntVoltage;
 }
 
-int16_t Adafruit_INA219_Mock::getCurrent_raw(void) {
-  return fakeit::DefaultValue<int16_t>::get();
+/*-----------------------------------------------------------------------------
+ * Adafruit_INA219::getCurrent Method
+ * ----------------------------------------------------------------------------
+*/
+int16_t Adafruit_INA219::getCurrent_raw(void) {
+  return fake_int16_Current;
 }
 
-int16_t Adafruit_INA219_Mock::getPower_raw(void) {
-  return fakeit::DefaultValue<int16_t>::get();
+/*-----------------------------------------------------------------------------
+ * Adafruit_INA219::getPower Method
+ * ----------------------------------------------------------------------------
+*/
+int16_t Adafruit_INA219::getPower_raw(void) {
+  return fake_int16_Power;
+}
+
+/*-----------------------------------------------------------------------------
+ * setFakeBusVoltage Method to Adafruit_INA219 class
+ * ----------------------------------------------------------------------------
+*/
+void setFakeBusVoltage(int16_t value){
+  fake_int16_BusVoltage = value;
+}
+
+/*-----------------------------------------------------------------------------
+ * setFakeShuntVoltage Method to Adafruit_INA219 class
+ * ----------------------------------------------------------------------------
+*/
+void setFakeShuntVoltage(int16_t value){
+  fake_int16_ShuntVoltage = value;
+}
+
+/*-----------------------------------------------------------------------------
+ * setFakeCurrent Method to Adafruit_INA219 class
+ * ----------------------------------------------------------------------------
+*/
+void setFakeCurrent(int16_t value){
+ fake_int16_Current = value;
+}
+
+/*-----------------------------------------------------------------------------
+ * setFakePower Method to Adafruit_INA219 class
+ * ----------------------------------------------------------------------------
+*/
+void setFakePower(int16_t value){
+  fake_int16_Power = value;
+}
+
+/*-----------------------------------------------------------------------------
+ * setFakeBegin Method to Adafruit_INA219 class
+ * ----------------------------------------------------------------------------
+*/
+void setFakeBegin(bool value){
+  fake_bool_begin = value;
+}
+
+/*-----------------------------------------------------------------------------
+ * getINA219 Method to Adafruit_INA219 class
+ * ----------------------------------------------------------------------------
+*/
+bool getINA219Begin(void){
+  return return_bool_begin;
 }
