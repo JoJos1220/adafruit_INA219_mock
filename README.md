@@ -14,7 +14,7 @@ For usage, define a Build Flag in Native Environment for Unity Testing:
 
 ```cpp
 build_flags = -D NATIVE_ENVIRONMENT
-´´´
+```
 
 Add the following lines in your Original Code Section enables build in Native environment.
 ```cpp
@@ -23,7 +23,7 @@ Add the following lines in your Original Code Section enables build in Native en
 #else
     #include <Adafruit_INA219.h>
 #endif
-´´´
+```
 
 Now, testing of the original Source code within the unity Environment can be done,
 without changing the original source code:
@@ -61,4 +61,4 @@ int main( int argc, char **argv) {
 
     return 0;
 }
- ´´´
+ ```
