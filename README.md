@@ -48,8 +48,9 @@ void test_begin(void){
 }
 void test_getCurrent_raw(void) {
     Adafruit_INA219 mockINA;
+    mockINA.begin();
     setFakeCurrent(1234);
-    int16_t result = mockINA.getCurrent_raw();
+    int16_t result = mockINA.getCurrent_mA();
     TEST_ASSERT_EQUAL_INT16(1234, result);
 }
 
