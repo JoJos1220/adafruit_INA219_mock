@@ -1,5 +1,12 @@
 # Adafruit INA219 MOCK Library
 
+[![PlatformIO CI][build-shield]][build-url]
+![License][license-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Release Version][realease-shield]][release-url]
+[![Release Date][releasedate-shield]][releasedate-url]
+[![Last commit][lastcommit-shield]][lastcommit-url]
+
 This is a simple MOCK-library for the Adafruit INA219 current sensor boards,
 created for simple unity testing:
  
@@ -63,3 +70,16 @@ int main( int argc, char **argv) {
     return 0;
 }
  ```
+
+ <!-- MARKDOWN LINKS & IMAGES -->
+[build-shield]: https://github.com/JoJos1220/adafruit_INA219_mock/actions/workflows/workflow.yml/badge.svg
+[build-url]: https://github.com/JoJos1220/adafruit_INA219_mock/actions/workflows/workflow.yml
+[license-url]:https://img.shields.io/github/license/Jojos1220/adafruit_INA219_mock?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/JoJos1220/adafruit_INA219_mock
+[contributors-url]: https://github.com/JoJos1220/adafruit_INA219_mock/graphs/contributors
+[realease-shield]: https://img.shields.io/github/release/JoJos1220/adafruit_INA219_mock.svg?style=plastic
+[release-url]: https://github.com/JoJos1220/adafruit_INA219_mock/releases/latest
+[releasedate-shield]: https://img.shields.io/github/release-date/JoJos1220/adafruit_INA219_mock.svg?style=plastic
+[releasedate-url]: https://github.com/JoJos1220/adafruit_INA219_mock/releases/latest/
+[lastcommit-shield]: https://img.shields.io/github/last-commit/JoJos1220/adafruit_INA219_mock?style=plastic
+[lastcommit-url]: https://github.com/JoJos1220/adafruit_INA219_mock/tree
