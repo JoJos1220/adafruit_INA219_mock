@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <adafruit_ina219_mock.h>
 
 Adafruit_INA219 MOCKina219;
