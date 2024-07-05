@@ -4,6 +4,7 @@
 ![License][license-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Release Version][realease-shield]][release-url]
+[![PlatformIO Registry][PlatformIO-shield]][PlatformIO-url]
 [![Release Date][releasedate-shield]][releasedate-url]
 [![Last commit][lastcommit-shield]][lastcommit-url]
 
@@ -72,6 +73,8 @@ int main( int argc, char **argv) {
  ```
 
  <!-- MARKDOWN LINKS & IMAGES -->
+[PlatformIO-shield]: https://badges.registry.platformio.org/packages/jojos1220/library/adafruit_ina219_mock.svg
+[PlatformIO-url]: https://registry.platformio.org/libraries/jojos1220/adafruit_ina219_mock
 [build-shield]: https://github.com/JoJos1220/adafruit_INA219_mock/actions/workflows/workflow.yml/badge.svg
 [build-url]: https://github.com/JoJos1220/adafruit_INA219_mock/actions/workflows/workflow.yml
 [license-url]:https://img.shields.io/github/license/Jojos1220/adafruit_INA219_mock?style=flat-square
